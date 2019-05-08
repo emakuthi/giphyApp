@@ -1,0 +1,19 @@
+
+<!-- <h1 [ngStyle]="{
+    'color': h1Style ? 'gray' : 'black',
+    'font-size': !h1Style ? '1em' : '4em'
+  }">Home</h1>
+
+<button (click)="firstClick()">Click me</button> -->
+
+<h1>Trending Gifs</h1>
+<div class="container">
+    <div class="row" *ngIf="gifs">   
+        <div *ngFor="let gif of gifs.data">
+            <div class="col-sm">
+                <img [src]="gif.images.downsized_medium.url" style="max-height: 200px; max-width:200px;">
+                <p>{{ gif.img }}</p>
+            </div>
+        </div>  
+    </div>
+</div>
